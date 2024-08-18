@@ -1,0 +1,111 @@
+﻿@using WebDoAn.Models
+@{
+    ViewBag.Title = "Index";
+    List<SanPham> sp = ViewData["SanPham"] as List<SanPham>;
+}
+
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4">
+            @{
+                int n = 1;
+                foreach (SanPham i in sp)
+                {
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Hình đại diện</h3>
+                            <div class="form-group">
+                                <img src="@i.hinhDD" />
+
+
+
+                                <div>
+                                    @Html.Label("File input")
+                                    <input type="search" class="form-control" placeholder="">
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    if (n++ >= 1)
+                    {
+                        break;
+                    }
+
+                }
+
+
+            }
+
+
+
+        </div>
+        <!-- right column -->
+        <div class="col-md-5">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Thông tin chính</h3>
+
+                </div>
+                @using (Html.BeginForm("NewProduct", "Index", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <form role="form">
+                        <div class="box-body">
+                            <div class="form-group">
+                                @Html.Label(" Tin sản phẩm")
+                                <input type="email" class="form-control" placeholder="vd:cà rốt">
+                            </div>
+                            <div class="form-group">
+                                @Html.Label(" Nội dung tóm tắt")
+                                <textarea rows="5" class="form-control" placeholder=" Nội dung không quá 5 dòng"> </textarea>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        @Html.Label(" Giá bán")
+                                        <input type="email" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    @Html.Label(" Số lượng")
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    @Html.Label(" thông tin khuyến mãi")
+                                    <input type="email" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label(" Ngày đăng")
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" id="reservation">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Kiểm duyệt
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
+                }
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>

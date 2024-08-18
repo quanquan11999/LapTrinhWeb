@@ -1,0 +1,10 @@
+﻿@using WebDoAn.Models;
+
+@{
+    TaiKhoan x = (TaiKhoan)Session["TtDangNhap"];
+    if (x == null)
+    {
+        Response.Redirect("~/login");
+    }
+  
+}

@@ -1,0 +1,92 @@
+﻿@using WebDoAn.Models
+@{
+    ViewBag.Title = "Index";
+    List<BaiViet> ds = ViewData["DSBaiViet"] as List<BaiViet>;
+}
+
+
+<section class="content-header">
+    <h1>
+        Danh sách hệ thống các bài viết
+        <small>advanced tables</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Data tables</li>
+    </ol>
+</section>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"></h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+
+                    <th> Tên bài viết</th>
+                    <th>Ngày đăng</th>
+                    <th>Tài Khoản</th>
+                    <th>Số lần đọc</th>
+                    <th> Lệnh- công cụ</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    foreach (BaiViet i in ds)
+                    {
+                        <tr>
+
+                            <td>@i.tenBV </td>
+                            <td>@string.Format("{0:hh:mm[dd/MM/yyyy]}", i.ngayDang) </td>
+                            <td>@i.TaiKhoan1.hoDem @i.TaiKhoan1.tenTV</td>
+                            <td>@i.soLanDoc</td>
+                            <td>
+                                <button class="btn btn-success" title="cho phép hiển thị"> Duyệt bài</button>
+                                <button class="btn btn-default" title="cho phép chỉnh sửa"> Chỉnh sửa</button>
+                                <button class="btn btn-danger" title="Xóa bài viết..."> Xóa</button>
+
+                            </td>
+                        </tr>
+
+                    }
+                }
+
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="col-sm-7">
+                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                    <ul class="pagination">
+                        <li class="paginate_button previous disabled" id="example2_previous">
+                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                        </li>
+                        <li class="paginate_button active">
+                            <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a>
+                        </li>
+
+                        <li class="paginate_button next" id="example2_next">
+                            <a href="#" aria-control="example2" data-dt-idx="7" tabindex="0">Next</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</div>

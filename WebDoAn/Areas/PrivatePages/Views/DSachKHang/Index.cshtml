@@ -1,0 +1,192 @@
+﻿@using WebDoAn.Models
+@{
+    ViewBag.Title = "Index";
+}
+<section class="content-header">
+    <h1>
+        Thông tin Khách hàng
+        <small>advanced tables</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Data tables</li>
+    </ol>
+</section>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"></h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th> Stt</th>
+                    <th>Số điện thoại</th>
+                    <th>Tên khách hàng</th>
+                    <th>Giới tính</th>
+                    <th>Địa chỉ</th>
+                    <th> số lần mua</th>
+                    <th> Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+
+                    <td>
+                        031226895
+                    </td>
+                    <td> Nguyễn Văn tèo</td>
+                    <td> Nam</td>
+                    <td>839 lê hồng phong Q.10</td>
+                    <td>12</td>
+                    <td> teo@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 02</td>
+                    <td>
+                        23658899
+                    </td>
+                    <td>Tết Tét</td>
+                    <td>Nam</td>
+                    <td> 20 trần thị cờ Q12.HCM</td>
+                    <td>7</td>
+                    <td> tetden@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 03</td>
+                    <td>
+                        036858899
+                    </td>
+                    <td> Chiến Đình Kiêu</td>
+                    <td>Nam</td>
+                    <td> 136 Nguyễn Oanh Quận Gò Vấp.HCM</td>
+                    <td>17</td>
+                    <td> kiukiiu@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 04</td>
+                    <td>
+                        036963158
+                    </td>
+                    <td> Trần Ngọc Đan thư</td>
+                    <td>Nữ</td>
+                    <td> châu thành Đồng Nai</td>
+                    <td>30</td>
+                    <td> thuthu@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 05</td>
+                    <td>
+                        098654831
+                    </td>
+                    <td> Võ Thiên Kim</td>
+                    <td>Nữ</td>
+                    <td> Cai Lậy Tiền Giang</td>
+                    <td>3</td>
+                    <td> kimvo@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 06</td>
+                    <td>
+                        089654621
+                    </td>
+                    <td> Ngô Ngọc Tuyền</td>
+                    <td>Nữ</td>
+                    <td> Vĩnh Thuận Kiên giang</td>
+                    <td>35</td>
+                    <td> nnt@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 07</td>
+                    <td>
+                        0896548931
+                    </td>
+                    <td> Trần Trung Dũng</td>
+                    <td>Nam</td>
+                    <td> 171 Kinh Dương Vương</td>
+                    <td>35</td>
+                    <td> Dung@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 08</td>
+                    <td>
+                        089654621
+                    </td>
+                    <td> Nguyễn thị Hồng </td>
+                    <td>Nữ</td>
+                    <td> ở nhà</td>
+                    <td>56</td>
+                    <td> hong@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td> 09</td>
+                    <td>
+                        089654621
+                    </td>
+                    <td> Diệp Lan Anh</td>
+                    <td>Nữ</td>
+                    <td> 971 Hoàng Văn Thụ Q.Tân Bình</td>
+                    <td>98</td>
+                    <td> diepdiep@gmil.com</td>
+
+                </tr>
+                <tr>
+                    <td> 10</td>
+                    <td>
+                        089694552
+                    </td>
+                    <td> Phạm Tội</td>
+                    <td>Nam</td>
+                    <td> 77 Cách mạng tháng 8 Q.3</td>
+                    <td>50</td>
+                    <td> toi@gmail.com</td>
+
+                </tr>
+
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="col-sm-7">
+                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                    <ul class="pagination">
+                        <li class="paginate_button previous disabled" id="example2_previous">
+                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                        </li>
+                        <li class="paginate_button active">
+                            <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a>
+                        </li>
+
+                        <li class="paginate_button next" id="example2_next">
+                            <a href="#" aria-control="example2" data-dt-idx="7" tabindex="0">Next</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</div>
+
